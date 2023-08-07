@@ -22,8 +22,10 @@ item_5 = item_3;
 let item_6 = null;
 let item_6_type = null;
 
-item_6 = 15;
-item_6_type = typeof item_6;
+item_6 = 15; // тип данных лежащих в переменной - number
+item_6_type = typeof item_6; // присваиваем этой переменной значение, которое является типом данных item_6 - 'number'
+console.log(`тип данных у переменной item_6_type - `, typeof item_6_type) 
+// просим вывести в консоль тип данных переменной в которой лежит строка! Но значение строки 'number'
 console.log(`item_6 == ${item_6}, item_6_type == ${item_6_type}`);
 
 let item_7 = null;

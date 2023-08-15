@@ -1,0 +1,60 @@
+// Напишите валидационный скрипт используя функции 
+
+let our_string = 'grgrva_elEna@gmail.com';
+//  1. Скрипт должен на вход принимать строку.
+console.log(our_string);
+// our_string = String(our_string);
+// console.log(our_string);
+
+function checkString (value) {
+    if (typeof value !== 'string') {
+            console.log('Это не строка')
+    }
+};
+
+checkString (our_string);
+
+//  2. После проверки строки выводить в консоль сообщение где будет конкретно написано, что не так в ведённой строке.
+
+//  3. Минимум 5 символов в строке
+const check_MinLenght = (value) => value.length >= 5;
+
+console.log("Строка должна быть больше 5 символов", check_MinLenght(our_string));
+
+//  4. Максимум 64 символа в строке
+const check_MaxLenght = (value) => value.length <= 64;
+
+console.log("Строка должна быть не более 64 символа", check_MinLenght(our_string));
+
+//  5. В строке должны быть буквы
+
+const check_Letters = (value) => /[A-ZА-ЯЁ]+/ig.test(value)
+
+console.log("В строке должны быть буквы", check_Letters(our_string));
+
+//  6. Должна быть хотя бы одна буква в верхнем регистре
+
+const check_Big_Letters = (value) => /[A-ZА-ЯЁ]+/g.test(value)
+
+console.log("Должна быть хотя бы одна буква в верхнем регистре", check_Big_Letters(our_string));
+
+//  8. Должна быть хотя бы одна @
+
+const check_At = (value) => /@/g.test(value)
+
+console.log("Должна быть хотя бы одна @", check_At(our_string));
+
+//  9. Строка не должна быть пустой
+
+const check_Empty = (value) => value.trim().length !== 0
+
+console.log("Строка не пустая", check_Empty(our_string));
+
+
+
+
+
+
+
+
+

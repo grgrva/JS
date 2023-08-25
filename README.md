@@ -1,2 +1,2 @@
 # JS
-'''JS Code'''
+'''JavaScript Code'''
